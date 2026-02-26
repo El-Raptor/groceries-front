@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import BrandsPage from './pages/BrandsPage';
+import CategoriesPage from './pages/CategoriesPage';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <div className="max-w-4xl mx-auto flex gap-6">
             <Link to="/" className="font-bold text-xl hover:text-blue-200">Groceries App</Link>
             <Link to="/brands" className="hover:text-blue-200 mt-1">Marcas</Link>
+            <Link to="/categories" className="hover:text-blue-200 mt-1">Categorias</Link>
           </div>
         </nav>
 
@@ -18,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<h1 className="text-center mt-10 text-xl text-gray-600">Bem-vindo ao Groceries! Escolha uma opção no menu.</h1>} />
             <Route path="/brands" element={<BrandsPage />} />
+            <Route path="/categories" element={<CategoriesPage />} />
           </Routes>
         </div>
       </div>
