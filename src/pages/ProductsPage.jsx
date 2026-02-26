@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getProducts, createProduct } from '../services/productService';
-import { getBrands } from '../services/brandService';
-import { getSubcategories } from '../services/categoryService';
+import { getProducts, createProduct } from '../services/ProductService';
+import { getBrands } from '../services/BrandService';
+import { getSubcategories } from '../services/CategoryService';
 
 export default function ProductsPage() {
   const [products, setProducts] = useState([]);
