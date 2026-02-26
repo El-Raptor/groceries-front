@@ -1,6 +1,6 @@
 import { api } from './api';
 
-// --- CATEGORIAS ---
+// --- CATEGORIES ---
 export const getCategories = async () => {
   const response = await api.get('/categories');
   return response.data;
@@ -11,9 +11,13 @@ export const createCategory = async (categoryData) => {
   return response.data;
 };
 
-// --- SUBCATEGORIAS ---
+// --- SUBCATEGORIES ---
 export const createSubcategory = async (subcategoryData) => {
-  // subcategoryData precisa ter o formato: { name: "Iogurtes", categoryId: 1 }
   const response = await api.post('/subcategories', subcategoryData);
+  return response.data;
+};
+
+export const getSubcategories = async () => {
+  const response = await api.get('/subcategories');
   return response.data;
 };
