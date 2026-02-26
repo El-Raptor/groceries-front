@@ -1,7 +1,8 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import BrandsPage from './pages/BrandsPage';
-import CategoriesPage from './pages/CategoriesPage';
-import ProductsPage from './pages/ProductsPage';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import BrandsPage from "./pages/BrandsPage";
+import CategoriesPage from "./pages/CategoriesPage";
+import ProductsPage from "./pages/ProductsPage";
+import StoresPage from "./pages/StoresPage";
 
 function App() {
   return (
@@ -14,16 +15,24 @@ function App() {
             <Link to="/brands" className="hover:text-blue-200 mt-1">Marcas</Link>
             <Link to="/categories" className="hover:text-blue-200 mt-1">Categorias</Link>
             <Link to="/products" className="hover:text-blue-200 mt-1">Produtos</Link>
+            <Link to="/stores" className="hover:text-blue-200 mt-1">Mercados</Link>
           </div>
         </nav>
 
-        {/* Onde as páginas vão aparecer */}
         <div className="p-4">
           <Routes>
-            <Route path="/" element={<h1 className="text-center mt-10 text-xl text-gray-600">Bem-vindo ao Groceries! Escolha uma opção no menu.</h1>} />
+            <Route 
+              path="/"
+              element={
+                <h1 className="text-center mt-10 text-xl text-gray-600">
+                  Bem-vindo ao Groceries! Escolha uma opção no menu.
+                </h1>
+              }
+            />
             <Route path="/brands" element={<BrandsPage />} />
             <Route path="/categories" element={<CategoriesPage />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/stores" element={<StoresPage />} />
           </Routes>
         </div>
       </div>
